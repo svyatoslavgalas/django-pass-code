@@ -1,0 +1,10 @@
+{% load static %}
+<form action="{% url 'account:verify' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Подтвердить</button>
+</form>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.mask.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
